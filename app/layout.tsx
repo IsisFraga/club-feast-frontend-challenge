@@ -5,8 +5,8 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'TMDB Movies',
-  description: 'See a movie tonight!',
+  title: 'The Movie Database (TMDB)',
+  description: 'The Movie Database (TMDB) is a popular, user editable database for movies and TV shows.',
 }
 
 export default function RootLayout({
