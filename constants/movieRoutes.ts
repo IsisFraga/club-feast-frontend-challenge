@@ -1,6 +1,8 @@
 export interface MovieSlugRoutes {
   serviceUrl: string;
   title: string;
+  navLabel: string;
+  path: string;
 }
 
 export const movieRoutes = new Map<string, MovieSlugRoutes>([
@@ -9,6 +11,8 @@ export const movieRoutes = new Map<string, MovieSlugRoutes>([
     {
       serviceUrl: "/movie/top_rated",
       title: "Top Rated Movies",
+      navLabel: "Top Rated",
+      path: 'top-rated'
     },
   ],
   [
@@ -16,6 +20,8 @@ export const movieRoutes = new Map<string, MovieSlugRoutes>([
     {
       serviceUrl: "/movie/now_playing",
       title: "Now Playing Movies",
+      navLabel: "Now Playing",
+      path: 'now-playing'
     },
   ],
   [
@@ -23,6 +29,8 @@ export const movieRoutes = new Map<string, MovieSlugRoutes>([
     {
       serviceUrl: "/movie/upcoming",
       title: "Upcoming Movies",
+      navLabel: "Upcoming",
+      path: 'upcoming'
     },
   ],
   [
@@ -30,6 +38,8 @@ export const movieRoutes = new Map<string, MovieSlugRoutes>([
     {
       serviceUrl: "/movie/popular",
       title: "Popular Movies",
+      navLabel: "Popular",
+      path: ''
     },
   ],
 ]);

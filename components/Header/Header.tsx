@@ -15,12 +15,13 @@ const Header = () => {
       "
     >
       <div className="
-          max-w-[1400px]
+          max-w-[1300px]
           flex
           flex-row
           items-center
           justify-center
           m-auto
+          px-9
         "
       >
         <Navbar />

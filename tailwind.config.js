@@ -8,16 +8,13 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'dark-blue': '#032541',
+      }
+    },
     fontFamily: {
       sans: ['"Source Sans 3"', 'Arial', 'sans-serif'],
-    },
-    colors: {
-      transparent: 'transparent',
-      current: 'currentColor',
-      white: colors.white,
-      sky: colors.sky,
-      'dark-blue': '#032541',
     },
   },
   plugins: [],

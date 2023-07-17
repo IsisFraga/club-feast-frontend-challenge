@@ -22,7 +22,7 @@ const Navbar = () => {
             lg:flex
           "
         >
-          <NavbarItem label="Login" />
+          <NavbarItem label="Movies" dropdown/>
           <NavbarItem label="TV Shows" />
           <NavbarItem label="People" />
           <NavbarItem label="More" />
