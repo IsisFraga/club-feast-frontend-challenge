@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import NavbarItem from "./NavbarItem"
 
 const Navbar = () => {
@@ -12,12 +13,12 @@ const Navbar = () => {
           justify-start
         "
       >
-        <img className="h-4 lg:h-5" src="/images/logo.svg" alt="The Movie Database (TMDB)" />
+        <Image width={154} height={20} src="/images/logo.svg" alt="The Movie Database (TMDB)" />
         <ul 
           className="
             flex-row 
-            ml-8 
-            gap-6 
+            ml-6 
+            gap-5 
             hidden 
             lg:flex
           "

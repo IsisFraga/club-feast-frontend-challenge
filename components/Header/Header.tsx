@@ -15,7 +15,7 @@ const Header = () => {
       "
     >
       <div className="
-          max-w-[1300px]
+          max-w-[1400px]
           flex
           flex-row
           items-center
