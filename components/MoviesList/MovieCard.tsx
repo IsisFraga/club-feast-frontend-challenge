@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { EllipsisHorizontalCircleIcon } from "@heroicons/react/24/solid";
 import Average from "../Average/Average";
 
 export interface MovieCard {
@@ -38,17 +39,22 @@ const MovieCard = ({
         shadow-md
         rounded-lg
         overflow-hidden
+        md:min-w-[160px]
         max-h-[141px]
         md:max-h-none
       "
     >
-      <Image
-        src={movieUrl}
-        width={200}
-        height={280}
-        alt={movieTitle}
-        className="cursor-pointer"
-      />
+      <div className="relative min-w-[94px] max-w-[94px] h-full m-full md:w-full md:min-w-[165px] md:max-w-[186px] md:h-[275px]">
+        <div className="hidden md:flex justify-end w-full pt-2 pr-2">
+          <EllipsisHorizontalCircleIcon className="w-6 h-6 relative z-10 text-white/[0.6] hover:text-light-blue cursor-pointer"/>
+        </div>
+        <Image
+          src={movieUrl}
+          fill={true}
+          alt={movieTitle}
+          className="cursor-pointer w-full md:object-fill"
+        />
+      </div>
       <Average movieVoteAverage={movieVoteAverage}/>
       <div className="flex flex-col p-5 md:p-0 md:pt-5 md:pb-2 md:px-2.5 md:max-h-[120px] justify-between">
         <div>

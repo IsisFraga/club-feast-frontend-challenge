@@ -12,7 +12,7 @@ const Average = ({movieVoteAverage}: IAverage) => {
 
   return (
     <div>
-      <div className="flex items-center justify-center rounded-full absolute w-10 h-10">
+      <div className="hidden md:flex items-center justify-center rounded-full absolute w-10 h-10">
         <svg width={38} height={38} className="absolute transform -rotate-90 -top-5 left-2 bg-[#081c22] rounded-full" viewBox="0 0 60 60">
           <circle
             className="text-gray-600"
@@ -36,9 +36,9 @@ const Average = ({movieVoteAverage}: IAverage) => {
             cy="30"
           />
         </svg>
-        <span className="text-white text-sm	relative -top-[19px] left-2 font-bold">
+        <span className="text-white text-sm	relative -top-[20px] left-2 font-bold">
           {average}
-          <span className="relative text-[6px] -top-1">
+          <span className="relative text-[6px] -top-1.5">
             %
           </span>
         </span>
