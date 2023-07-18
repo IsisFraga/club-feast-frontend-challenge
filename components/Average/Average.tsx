@@ -7,8 +7,8 @@ const Average = ({movieVoteAverage}: IAverage) => {
   const circumference = 20 * 2 * Math.PI;
   const filledCircunference =
     circumference - (movieVoteAverage / 10) * circumference;
-  const average = movieVoteAverage * 10
-  const roundColor = movieVoteAverage > 6.5 ? "text-green-600": "text-yellow-rate"
+  const average = movieVoteAverage !== 0 ? movieVoteAverage * 10 : "NR"
+  const roundColor = movieVoteAverage > 6.5 ? "text-green-600" : "text-yellow-rate"
 
   return (
     <div>
@@ -24,7 +24,7 @@ const Average = ({movieVoteAverage}: IAverage) => {
             cy="30"
           />
           <circle
-            className={roundColor}
+            className={movieVoteAverage === 0 ? "text-gray-600" : roundColor}
             strokeWidth="3"
             strokeLinecap="round"
             strokeDasharray={`${circumference}`}
@@ -38,9 +38,11 @@ const Average = ({movieVoteAverage}: IAverage) => {
         </svg>
         <span className="text-white text-sm	relative -top-[20px] left-2 font-bold">
           {average}
-          <span className="relative text-[6px] -top-1.5">
-            %
-          </span>
+          {movieVoteAverage !== 0 &&
+            <span className="relative text-[6px] -top-1.5">
+              %
+            </span>
+          }
         </span>
       </div>
     </div>
