@@ -52,6 +52,7 @@ const MovieCard = ({
           src={movieUrl}
           fill={true}
           alt={movieTitle}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="cursor-pointer w-full md:object-fill"
         />
       </div>
