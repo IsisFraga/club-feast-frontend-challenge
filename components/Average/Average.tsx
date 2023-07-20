@@ -1,9 +1,11 @@
+import { FunctionComponent } from "react";
+
 export interface IAverage {
   movieVoteAverage: number
   mobileHidden?: boolean
 }
 
-const Average = ({movieVoteAverage, mobileHidden}: IAverage) => {
+const Average:FunctionComponent<IAverage> = ({movieVoteAverage, mobileHidden}) => {
   const circumference = 20 * 2 * Math.PI;
   const filledCircunference =
     circumference - (movieVoteAverage / 10) * circumference;

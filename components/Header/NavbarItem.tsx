@@ -1,3 +1,4 @@
+import { FunctionComponent } from "react";
 import Dropdown from "./Dropdown";
 
 interface NavbarItemProps {
@@ -6,10 +7,10 @@ interface NavbarItemProps {
   dropdown?: boolean;
 }
 
-const NavbarItem: React.FC<NavbarItemProps> = ({ label, className, dropdown }) => {
+const NavbarItem: FunctionComponent<NavbarItemProps> = ({ label, className, dropdown }) => {
 
   return (
-    <li className={`group text-white cursor-pointer font-sans font-semibold text-base p-2 ${className}`}>
+    <li className={`group md:w-fit text-white cursor-pointer font-sans font-semibold text-base p-2 ${className}`}>
       {label}
       {dropdown && <Dropdown />}
     </li>

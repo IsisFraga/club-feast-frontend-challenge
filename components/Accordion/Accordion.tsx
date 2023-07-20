@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { FunctionComponent, useState } from "react";
 import CheckboxFilter from "../Filters/CheckboxFilter";
 import ShowMeFilter from "../Filters/ShowMeFilter";
 
@@ -20,7 +20,7 @@ export const checkboxItems = [
   },
 ];
 
-const Accordion = ({ accordionTitle, groupOpen }: IAccordion) => {
+const Accordion:FunctionComponent<IAccordion> = ({ accordionTitle, groupOpen }) => {
   const [activeCheckbox, setActiveCheckbox] = useState(checkboxItems);
 
   const handleToggleActiveCheckbox = (
@@ -35,8 +35,6 @@ const Accordion = ({ accordionTitle, groupOpen }: IAccordion) => {
       
       )
     );
-
-    console.log('activeCheckbox', activeCheckbox)
   };
 
   return (
@@ -96,7 +94,6 @@ const Accordion = ({ accordionTitle, groupOpen }: IAccordion) => {
               <ShowMeFilter />
               {checkboxItems.map((filter, index) => (
                 <>
-                  {console.log('caralho', filter)}
                   <CheckboxFilter
                     key={filter.title}
                     filter={filter}

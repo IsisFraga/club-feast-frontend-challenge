@@ -1,12 +1,14 @@
+import { FunctionComponent } from 'react'
 import Image from 'next/image'
 import NavbarItem from "./NavbarItem"
 
-const Navbar = () => {
+const Navbar:FunctionComponent = () => {
   return (
     <nav className="w-full">
       <div 
         className="
           m-auto
+          md:w-full
           flex
           flex-row
           items-center
@@ -17,6 +19,7 @@ const Navbar = () => {
         <ul 
           className="
             flex-row 
+            w-full
             ml-6 
             gap-5 
             hidden 

@@ -13,7 +13,7 @@ export interface IMoviePosterHero {
 
 const MoviePosterHero: FunctionComponent<IMoviePosterHero> = ({movieTitle, movieUrl, bgColor}) => {
   return (
-    <div className={`flex relative w-full h-screen min-h-[230px] max-h-[330px] items-center justify-center md:max-h-[520px]`}>
+    <div className={`flex relative w-full h-screen min-h-[230px] items-center justify-center`}>
       <div style={{backgroundColor: bgColor}} className={`absolute h-full w-screen min-h-[230px] md:m-h-[510px] opacity-70 z-10`} />
       <Image
           src={movieUrl}

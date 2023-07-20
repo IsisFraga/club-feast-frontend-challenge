@@ -23,7 +23,7 @@ const CheckboxFilter: FunctionComponent<ICheckboxFilter> = ({
           className="accent-light-blue w-4 h-4 border border-gray-300 rounded cursor-pointer"
         />
         <label htmlFor={label} className="ml-2">
-          {label} {checked ? "s" : "n"}
+          {label}
         </label>
       </div>
     </div>

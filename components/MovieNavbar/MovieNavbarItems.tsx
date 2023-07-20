@@ -27,6 +27,7 @@ const MovieNavbarItems: FunctionComponent<IMovieNavbarSubitems> = ({
         flex-col
         py-2
         top-8
+        z-40
       "
     >
       {movieNavbaritems.map((movieNavbaritem) => (

@@ -8,8 +8,8 @@ export interface IMovieCastSection {
 
 const MovieCastSection: FunctionComponent<IMovieCastSection> = ({castDetails}) => {
   return (
-    <div className="w-full max-w-[1400px] flex flex-col md:flex-row justify-center m-auto p-2">
-      <div className="flex flex-col w-full justify-center md:my-10">
+    <div className="w-full max-w-[1400px] flex flex-col md:flex-row justify-center m-auto md:my-10 p-2">
+      <div className="flex flex-col w-full justify-center">
         <h3 className="text-xl font-semibold text-black my-2.5 md:mx-20">Top Billed Cast</h3>
         <div className="overflow-x-auto md:mx-20 relative flex flex-row gap-2">
           {castDetails.map((actorDetails) => (
@@ -17,7 +17,8 @@ const MovieCastSection: FunctionComponent<IMovieCastSection> = ({castDetails}) =
           ))}
         </div>
       </div>
-      <div className='hidden md:flex w-full md:min-w-[200px]'>
+      <div className='hidden md:flex md:flex-col w-full md:min-w-[200px]'>
+          social media icons
         <ul className='flex'>
           <li>F</li>
           <li>T</li>

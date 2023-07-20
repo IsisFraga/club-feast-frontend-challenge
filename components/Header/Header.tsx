@@ -1,7 +1,8 @@
+import { FunctionComponent } from "react";
 import UtilitiesMenu from "./UtilitiesMenu";
 import Navbar from "./Navbar";
 
-const Header = () => {
+const Header:FunctionComponent = () => {
   return (
     <header
       className="

@@ -1,7 +1,8 @@
+import { FunctionComponent } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { EllipsisHorizontalCircleIcon } from "@heroicons/react/24/solid";
 import Average from "../Average/Average";
-import Link from "next/link";
 
 export interface MovieCard {
   movieImage: string;
@@ -12,14 +13,14 @@ export interface MovieCard {
   movieId: number | string;
 }
 
-const MovieCard = ({
+const MovieCard:FunctionComponent<MovieCard> = ({
   movieImage,
   movieTitle,
   movieDate,
   movieDescription,
   movieVoteAverage,
   movieId
-}: MovieCard) => {
+}) => {
   const movieUrl = `https://image.tmdb.org/t/p/w200${movieImage}`;
 
   const options = {

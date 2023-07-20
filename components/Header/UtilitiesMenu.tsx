@@ -1,7 +1,8 @@
+import { FunctionComponent } from "react";
 import { MagnifyingGlassIcon, PlusIcon } from "@heroicons/react/24/solid";
 import NavbarItem from "./NavbarItem";
 
-const UtilitiesMenu: React.FC = () => {
+const UtilitiesMenu: FunctionComponent = () => {
   return (
     <div className="
         w-full 

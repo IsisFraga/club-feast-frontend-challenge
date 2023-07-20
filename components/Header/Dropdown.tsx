@@ -1,7 +1,8 @@
-import { movieRoutes } from "@/constants";
 import Link from "next/link";
+import { FunctionComponent } from "react";
+import { movieRoutes } from "@/constants";
 
-const Dropdown = () => {
+const Dropdown:FunctionComponent = () => {
   return (
     <div
       className="
@@ -18,6 +19,7 @@ const Dropdown = () => {
         bg-white 
         flex-col
         py-2
+        z-40
       "
     >
       {Array.from(movieRoutes.entries()).map(([key, { path, navLabel }]) => (

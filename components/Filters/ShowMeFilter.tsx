@@ -1,6 +1,7 @@
+import { FunctionComponent } from "react";
 import { QuestionMarkCircleIcon } from "@heroicons/react/24/solid";
 
- const ShowMeFilter = () => {
+ const ShowMeFilter:FunctionComponent = () => {
   return (
     <div className="flex flex-col w-full border-y border-gray-200 px-4">
       <div className="flex w-full py-3">

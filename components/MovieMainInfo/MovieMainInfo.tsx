@@ -8,7 +8,6 @@ import MovieGenre from "./MovieGenre";
 import MovieOverview from "./MovieOverview";
 import MovieCrew from "./MovieCrew";
 import MoviePosterHero from "../MoviePosterHero/MoviePosterHero";
-import { Crew } from "@/types/credits";
 
 export interface IMovieMainInfo {
   movieDetails: MovieDetailsWithCreditsResponse,
