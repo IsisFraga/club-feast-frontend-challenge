@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { EllipsisHorizontalCircleIcon } from "@heroicons/react/24/solid";
 import Average from "../Average/Average";
+import Link from "next/link";
 
 export interface MovieCard {
   movieImage: string;
@@ -8,6 +9,7 @@ export interface MovieCard {
   movieDate: string;
   movieDescription: string;
   movieVoteAverage: number;
+  movieId: number | string;
 }
 
 const MovieCard = ({
@@ -16,6 +18,7 @@ const MovieCard = ({
   movieDate,
   movieDescription,
   movieVoteAverage,
+  movieId
 }: MovieCard) => {
   const movieUrl = `https://image.tmdb.org/t/p/w200${movieImage}`;
 
@@ -30,7 +33,7 @@ const MovieCard = ({
 
   
   return (
-    <div
+    <Link
       className="
         flex
         md:flex-col
@@ -43,6 +46,7 @@ const MovieCard = ({
         max-h-[141px]
         md:max-h-none
       "
+      href={"/movie/" + movieId + '-' + movieTitle.toLowerCase().split(' ').join('-')}
     >
       <div className="relative min-w-[94px] max-w-[94px] h-full m-full md:w-full md:min-w-[165px] md:max-w-[186px] md:h-[275px]">
         <div className="hidden md:flex justify-end w-full pt-2 pr-2">
@@ -77,7 +81,7 @@ const MovieCard = ({
           {movieDescription}
         </p>
       </div>
-    </div>
+    </Link>
   );
 };
 

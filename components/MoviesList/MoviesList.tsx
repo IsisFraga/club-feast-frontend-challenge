@@ -22,7 +22,7 @@ const MoviesList: FunctionComponent<IMovieList> = ({movieList}) => {
       "
     >
       {movieList.map((movie) =>
-          <MovieCard movieImage={movie.poster_path} movieTitle={movie.original_title} movieDate={movie.release_date} movieDescription={movie.overview} movieVoteAverage={movie.vote_average}/>
+          <MovieCard key={movie.id} movieImage={movie.poster_path} movieTitle={movie.original_title} movieDate={movie.release_date} movieDescription={movie.overview} movieVoteAverage={movie.vote_average} movieId={movie.id} />
         )
       }
     </section>

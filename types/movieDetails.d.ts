@@ -55,3 +55,7 @@ export interface SpokenLanguage {
   iso_639_1: string
   name: string
 }
+
+export type MovieDetailsWithCreditsResponse = IMovieDetails & {
+  credits: Omit<ICredits, 'id'>
+}

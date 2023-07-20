@@ -2,10 +2,23 @@ import { baseApiUrl } from "@/constants";
 import { config } from "../config";
 import { Movie, MovieResponse } from "@/types/movie";
 import { Genre, GenreResponse } from "@/types/genre";
+import { MovieDetailsWithCreditsResponse } from "@/types/movieDetails";
 
 export const movieService = (function () {
-  const _fetchMovieDetails = async function () {
+  const _fetchMovieDetails = async function (slug: string): Promise<MovieDetailsWithCreditsResponse> {
+    
+    const customQuery = {
+      'append_to_response': 'credits'
+    }
+    try {
+      const url = _getUrl('/movie/' + slug.split(`-`)[0], customQuery);
 
+      const response = await fetch(url, config);
+      const data = await response.json();
+      return data;
+    } catch (e) {
+      throw e;
+    }
   }
 
   const _fetchMovieList = async function () {
@@ -42,13 +55,14 @@ export const movieService = (function () {
     });
   };
 
-  const _getUrl = function (endpoint: string) {
+  const _getUrl = function (endpoint: string, customQuery: Record<string, string> = {}) {
     return (
       baseApiUrl +
       endpoint +
       "?" +
       new URLSearchParams({
         api_key: process.env.API_KEY as string,
+        ...customQuery
       })
     );
   };
@@ -57,5 +71,6 @@ export const movieService = (function () {
 
   return {
     fetchMovielistWithGenresPerGategory: _fetchMovielistWithGenresPerGategory,
+    fetchMovieDetails: _fetchMovieDetails
   };
 })();
