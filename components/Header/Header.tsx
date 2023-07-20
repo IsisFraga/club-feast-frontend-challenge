@@ -10,7 +10,6 @@ const Header = () => {
         z-40 
         bg-dark-blue
         px-4
-        md:px-16
         py-3
       "
     >

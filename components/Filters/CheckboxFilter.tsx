@@ -1,5 +1,5 @@
 "use client";
-import { FunctionComponent, useState } from "react";
+import { FunctionComponent } from "react";
 import { checkboxItems } from "../Accordion/Accordion";
 
 export interface ICheckboxFilter {

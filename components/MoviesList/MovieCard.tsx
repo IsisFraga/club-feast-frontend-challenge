@@ -56,7 +56,7 @@ const MovieCard = ({
           className="cursor-pointer w-full md:object-fill"
         />
       </div>
-      <Average movieVoteAverage={movieVoteAverage}/>
+      <Average mobileHidden movieVoteAverage={movieVoteAverage}/>
       <div className="flex flex-col p-5 md:p-0 md:pt-5 md:pb-2 md:px-2.5 md:max-h-[120px] justify-between">
         <div>
           <h2 className="text-black font-bold hover:text-light-blue cursor-pointer">
